@@ -1,0 +1,13 @@
+A retenir 
+
+CSS
+
+  - relative>absolute>relative>absolute (il faut l'un pour avoir l'autre)
+  -fill *
+  -outline
+  -content (needed for before)
+
+JS
+
+  - Parentchild, nodeChild et les node en général.
+  
