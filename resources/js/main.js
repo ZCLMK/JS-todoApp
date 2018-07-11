@@ -1,6 +1,5 @@
 //data is an object that stores our completed and todo items upon each update.
 //we use stringify and parse because the purpose of data is to handle the local storage of our tasks(only string format works)
-
 var data = (localStorage.getItem("todoList"))? JSON.parse(localStorage.getItem("todoList")):{
   todo:[],
   completed:[]

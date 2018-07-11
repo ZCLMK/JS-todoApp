@@ -1,7 +1,8 @@
 @charset "UTF-8";
 body {
-  background: #edf0f1;
-  padding: 80px 0 0 0;
+  background: #f7e098;
+  padding: 80px 0px;
+  max-width: 400px;
 }
 
 body,
@@ -12,13 +13,41 @@ button {
 .noFill{
   fill:none; /*new*/
 }
-header {
+
+.wrapper--outer{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background: rgb(236, 233, 233);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper--todo{
+  border-radius: 5px;
+  max-width:400px;
+  height:100%;
+   padding:20px;
+}
+.container {
   width: 100%;
+  float: left;
+  height:85%;
+  padding: 20px;
+  overflow-y: auto;
+  background: rgb(177, 255, 229);
+
+}
+
+header {
+  display:flex;
+  align-items: center;
+  width: 100%;
+  max-width:400px;
   height: 80px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5;
   padding: 15px;
   background-color: #25b99a;
   border-bottom-right-radius: 10px;
@@ -39,7 +68,7 @@ header input {
   padding: 0 60px 0 0;
   color: #fff;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px 25px 25px 5px;
+  border-radius: 0px 0px 5pxx 5px;
   border: 0px;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -50,12 +79,17 @@ header input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.75);
 }
 
+#button--div{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5% 50% 50% 5%;
+}
 header button {
   width: 50px;
   height: 50px;
-  position: absolute;
-  top: 15px;
-  right: 15px;
+ display:flex;
+ align-items: center;
+ justify-content: center;
+  margin-top:0px;
   z-index: 2;
   border-radius: 25px;
   background: #fff;
@@ -68,23 +102,16 @@ header button {
 header button svg {
   width: 16px;
   height: 16px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -8px 0 0 -8px;
 }
 
 header button svg .fill {
   fill: #25b99a;
 }
 
-.container {
-  width: 100%;
-  float: left;
-  padding: 15px;
-}
+
 
 ul.todo {
+  min-width: 300px;
   width: 100%;
   float: left;
   padding:15px 0 0 0;
@@ -138,8 +165,10 @@ ul.todo#todo:after{
   width: 100%;
   display: block;
   font-size: 12px;
-  color:#949998;
+  color:#868888;
   text-align: center;
+  font-family: 'Gaegu', cursive;
+  font-size: 1.3em;
 }
 
 ul.todo li .buttons {
